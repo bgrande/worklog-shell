@@ -1,0 +1,46 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+env:
+  TARGET_DIR: "app"
+jobs:
+  build_log:
+    runs-on: ubuntu-latest
+    env:
+      CI_COMMIT_MESSAGE: Create Build Artifacts
+      CI_COMMIT_AUTHOR: Continuous Integration
+      CI_COMMIT_AUTHOR_EMAIL: ci@bgrande.de
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: prepare build
+        run: mkdir -p build
+
+      - name: config
+        run: cat ${{ secrets.ENV }} > build/.env
+
+      - name: test
+        run: cargo test
+
+      - name: build
+        run: cargo build -r
+
+      - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
+        # Only run on main branch push (e.g. after pull request merge).
+        if: github.event_name == 'push'
+        run: |
+          cp target/release/worklog worklog
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_AUTHOR_EMAIL }}"
+          git add worklog
+          git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push
+          
+
+     
