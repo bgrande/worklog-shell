@@ -33,9 +33,12 @@ more detailed description<br>
 end_time<br>
 start_time2<br>
 summary4; summary5<br>
-more details<br>
+JIRA-1: more details<br>
 extended details<br>
 end_time2<br>
+
+When using a jira taskId like `PROJECT-1: my work done` this will be added as a jira comment 
+when a jira hook is active and a token exists. 
 
 ### learnings, impediments
 One learning per line.
@@ -47,7 +50,7 @@ And again, planning an app and getting all excited about it is way easier than t
 
 __example impediments__
 
-Building the app doesn't work although I used cargo build -r.
+Building the app doesn't work, although I used cargo build -r.
 
 ### breaks
 The format is `hours:minutes`
@@ -70,6 +73,8 @@ structure: as planned | mostly as planned | some interruptions | too many interr
     - Create repo
     - Push repo
     - Make money
+
+See the folder [example](/example) for more detailed examples.
 
 
 # Dependencies
