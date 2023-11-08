@@ -28,7 +28,7 @@ Each file needs to be structured in a special way so the parser can parse it cor
 This is the most complex, although hopefully straightforward.
 
 start_time<br>
-summary<br>
+summary; summary 2; summary 3<br>
 more detailed description<br>
 end_time<br>
 
