@@ -37,7 +37,7 @@ One learning per line.
 
 __example learnings__
 
-Was surprised how Rust error handling works. Turns out you can just handle the error with `match` and decide if you want to stop the app or continue with or without a message.
+Was surprised how Rust error handling works. Turns out you can just handle the error with `match` and decide if you want to stop the app or continue with or without a message.<br>
 And again, planning an app and getting all excited about it is way easier than the implementation. 
 
 __example impediments__
