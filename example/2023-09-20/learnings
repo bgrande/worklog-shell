@@ -1,0 +1,2 @@
+Was surprised how Rust error handling works. Turns out you can just handle the error with match and decide if you want to stop the app or continue with or without a message.
+And again, planning an app and getting all excited about it is way easier than the implementation.
