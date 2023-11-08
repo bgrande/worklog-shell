@@ -56,7 +56,7 @@ kids: 00:30
 ### rating
 mood: good | bad | ok<br>
 rating: very good | good | ok | bad | very bad<br>
-resume: as planned | mostly as planned | some interruptions | too many interruptions | total chaos
+structure: as planned | mostly as planned | some interruptions | too many interruptions | total chaos
 
 ### todo.md
 - no parsing right now
