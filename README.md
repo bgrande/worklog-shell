@@ -36,16 +36,19 @@ end_time<br>
 One learning per line.
 
 __example learnings__
+
 Was surprised how Rust error handling works. Turns out you can just handle the error with `match` and decide if you want to stop the app or continue with or without a message.
 And again, planning an app and getting all excited about it is way easier than the implementation. 
 
 __example impediments__
+
 Building the app doesn't work although I used cargo build -r.
 
 ### breaks
 The format is `hours:minutes`
 
 __example__
+
 lunch: 00:45<br>
 shopping: 1:15<br>
 kids: 00:30
