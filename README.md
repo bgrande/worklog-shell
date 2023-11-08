@@ -27,10 +27,10 @@ Each file needs to be structured in a special way so the parser can parse it cor
 ### projectname, work
 This is the most complex, although hopefully straightforward.
 
-start_time
-summary
-more detailed description
-end_time
+start_time<br>
+summary<br>
+more detailed description<br>
+end_time<br>
 
 ### learnings, impediments
 One learning per line.
@@ -46,13 +46,13 @@ Building the app doesn't work although I used cargo build -r.
 The format is `hours:minutes`
 
 __example__
-lunch: 00:45
-shopping: 1:15
+lunch: 00:45<br>
+shopping: 1:15<br>
 kids: 00:30
 
 ### rating
-mood: good | bad | ok
-rating: very good | good | ok | bad | very bad
+mood: good | bad | ok<br>
+rating: very good | good | ok | bad | very bad<br>
 resume: as planned | mostly as planned | some interruptions | too many interruptions | total chaos
 
 ### todo.md
