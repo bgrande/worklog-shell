@@ -3,6 +3,8 @@ use crate::file::create_path;
 
 mod file;
 
+const DEFAULT_NAME: &str = "worklog";
+
 #[derive(Parser)]
 #[command(name = "worklog", author = "Benedikt Grande", version = "0.1", about = "reminds you about any domain expiry", long_about = None)]
 struct Args {
@@ -12,9 +14,9 @@ struct Args {
 
 #[derive(Subcommand)]
 enum Commands {
-    New {
+    Init {
         #[arg(short, long)]
-        name: String,
+        name: Option<String>,
     },
     Process {
         #[arg(short, long)]
@@ -30,14 +32,12 @@ fn create_new(name: String) {
             eprintln!("Could not create new worklog because: {}", e); return
         }
     };
-
-
 }
 
 fn process(name: Option<String>) {
     let new_name = match name {
         Some(nam) => nam,
-        None => ""
+        None => DEFAULT_NAME.to_string()
     };
 
 
@@ -48,10 +48,14 @@ async fn main() {
     let args = Args::parse();
 
     match &args.command {
-        Some(Commands::New {
+        Some(Commands::Init {
                  name,
              }) => {
-            create_new(name.to_owned()).await;
+            let named = match name.to_owned() {
+                Some(nam) => nam,
+                None => DEFAULT_NAME.to_string()
+            };
+            create_new(named);
         }
         Some(Commands::Process {
             name,

@@ -10,4 +10,3 @@ anyhow = "1.0"
 chrono = { version = "0.4" }
 clap = { version = "4.3", features = ["derive"] }
 tokio = {version = "1.29", features = ["full"]}
-git2 = "0.17.2"
