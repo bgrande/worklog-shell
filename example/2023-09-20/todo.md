@@ -1,3 +1,4 @@
+# worklog
 - get the worklog scaffolding running
 - get the worklog GitHub actions build running
 - complete the worklog GitHub actions presets
@@ -6,3 +7,6 @@
 - add teams hook
 - add jira hook
 - go make a party
+
+# work
+- getting things done

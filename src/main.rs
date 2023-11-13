@@ -1,7 +1,9 @@
+use chrono::format::parse;
 use clap::{Parser, Subcommand};
-use crate::file::create_path;
+use crate::file::{init_repository};
 
 mod file;
+mod parse;
 
 const DEFAULT_NAME: &str = "worklog";
 
@@ -26,8 +28,8 @@ enum Commands {
 }
 
 fn create_new(name: String) {
-    let path = match create_path(name) {
-        Ok(path_name) => path_name,
+    match init_repository(name.clone()) {
+        Ok(()) => println!("Initializing repository {} was successful", name),
         Err(e) => {
             eprintln!("Could not create new worklog because: {}", e); return
         }
@@ -39,8 +41,6 @@ fn process(name: Option<String>) {
         Some(nam) => nam,
         None => DEFAULT_NAME.to_string()
     };
-
-
 }
 
 #[tokio::main]
@@ -57,14 +57,16 @@ async fn main() {
             };
             create_new(named);
         }
+
         Some(Commands::Process {
             name,
          }) => {
             process(name.to_owned());
         }
+        
         None => {
-            print!("I really don't know what to do!");
-            print!("Please use '--help' to get more command information!")
+            println!("I really don't know what to do!");
+            println!("Please use '--help' to get more command information!")
         }
     }
 }
