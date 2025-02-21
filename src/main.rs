@@ -8,7 +8,7 @@ mod parse;
 const DEFAULT_NAME: &str = "worklog";
 
 #[derive(Parser)]
-#[command(name = "worklog", author = "Benedikt Grande", version = "0.1", about = "reminds you about any domain expiry", long_about = None)]
+#[command(name = "worklog", author = "Benedikt Grande", version = "0.1", about = "logging your work", long_about = None)]
 struct Args {
     #[command(subcommand)]
     command: Option<Commands>,
