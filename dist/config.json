@@ -1,0 +1,63 @@
+{
+  "taxes": {
+    "vat19": {
+      "id": "main",
+      "name": "19%",
+      "country": "Germany",
+      "number": "0.19",
+      "active": true
+    },
+    "vat7": {
+      "id": "main",
+      "name": "7%",
+      "country": "Germany",
+      "number": "0.07",
+      "active": true
+    }
+  },
+  "emails": {
+    "sender": {
+      "name": "",
+      "from": "",
+      "reply-to": "",
+      "signature": "",
+      "credentials": {
+        "host": "",
+        "port": "",
+        "user": "",
+        "password": ""
+      }
+    }
+  },
+  "units": [
+    {
+      "id": "stk",
+      "name": "Stk",
+      "full_name": "Stück"
+    },
+    {
+      "id": "stk",
+      "name": "Stk",
+      "full_name": "Stück"
+    }
+  ],
+  "payments": {
+    "main": {
+      "summary": "Überweisung",
+      "holder_name": "Benedikt Grande",
+      "iban": "",
+      "bic": "",
+      "bank_name": ""
+    },
+    "paypal": {
+      "summary": "PayPal",
+      "holder_name": "Benedikt Grande",
+      "address": "",
+      "bank_name": "PayPal"
+    }
+  },
+  "payment_texts": {
+    "main": "",
+    "main_en": ""
+  } 
+}
