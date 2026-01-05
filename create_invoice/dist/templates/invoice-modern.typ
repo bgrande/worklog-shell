@@ -125,8 +125,8 @@
         Vereinbarungsgemäß erhalten Sie hiermit eine Gutschrift
         zur Rechnung *#id* vom *#issuing-date*.
       ],
-      invoice-id: "Rechnungs-Nr",
-      customer-id: "Kunden-Nr",
+      invoice-id: "Rechnungsnummer",
+      customer-id: "Kundennummer",
       issuing-date: "Rechnungsdatum",
       service-date: "Leistungsdatum",
       delivery-date: "Lieferdatum",
@@ -370,7 +370,7 @@
           #v(0.1em)
           #set text(size: 11pt)
           #grid(
-            columns: (1.6fr, 1fr),
+            columns: (1.4fr, 1fr),
             rows: (auto),
             gutter: 1em,
             align: (left, right),

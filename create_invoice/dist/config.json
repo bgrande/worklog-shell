@@ -1,0 +1,87 @@
+{
+  "taxes": {
+    "vat19": {
+      "id": "vat19",
+      "name": "19%",
+      "country": "DE",
+      "value": "0.19",
+      "active": true,
+      "is_default": true
+    },
+    "vat7": {
+      "id": "vat7",
+      "name": "7%",
+      "country": "DE",
+      "value": "0.07",
+      "active": true,
+      "is_default": false
+    }
+  },
+  "emails": {
+    "sender": {
+      "name": "",
+      "from": "",
+      "reply_to": "",
+      "signature": "",
+      "credentials": {
+        "host": "",
+        "port": "",
+        "user": "",
+        "password": ""
+      }
+    }
+  },
+  "units": [
+    {
+      "id": "stk",
+      "short_name": "Stk",
+      "name": "Stück"
+    },
+    {
+      "id": "std",
+      "short_name": "Std",
+      "name": "Stunde"
+    }
+  ],
+  "automation": {
+    "enabled": true,
+    "intervals": "tbd"
+  },
+  "company": {
+    "addresses": {
+      "main": {
+        "id": "main",
+        "for_invoice": true,
+        "street": "Reinhard-Reichenbach-Str. 5",
+        "addition": "",
+        "zip": "65385",
+        "city": "Rüdesheim am Rhein",
+        "state": "Hessen",
+        "country": "Deutschland",
+        "valid_from": "",
+        "valid_to": ""
+      }
+    },
+    "payments": {
+      "transfer": {
+        "id": "transfer",
+        "summary": "Überweisung",
+        "holder_name": "Benedikt Grande",
+        "iban": "",
+        "bic": "",
+        "bank_name": "",
+        "is_default": true,
+        "payment_text": ""
+      },
+      "paypal": {
+        "id": "paypal",
+        "summary": "PayPal",
+        "holder_name": "Benedikt Grande",
+        "address": "paypal@bgrande.de",
+        "bank_name": "PayPal",
+        "is_default": false,
+        "payment_text": ""
+      }
+    }
+  }
+}
